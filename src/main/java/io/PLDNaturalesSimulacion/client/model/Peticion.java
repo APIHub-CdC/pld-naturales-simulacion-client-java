@@ -19,11 +19,12 @@ public class Peticion {
   private String apellidoPaterno = null;
   @SerializedName("apellidoMaterno")
   private String apellidoMaterno = null;
+
   public Peticion folio(String folio) {
     this.folio = folio;
     return this;
   }
-   
+
   @ApiModelProperty(example = "000012", value = "Folio.")
   public String getFolio() {
     return folio;
@@ -35,7 +36,7 @@ public class Peticion {
     this.tipoDocumento = tipoDocumento;
     return this;
   }
-   
+
   @ApiModelProperty(example = "00003", required = true, value = "<table><thead><tr>Tipo de documento que corresponde al número de documento que se quiere consultar</tr><tr><th>Tipo documento</th><th>Descripción</th></tr></thead><tbody><tr><td>1</td><td>DNI</td></tr><tr><td>2</td><td>Carnet de extranjería</td></tr><tr><td>10</td><td>RUC</td></tr></tbody></table>")
   public String getTipoDocumento() {
     return tipoDocumento;
@@ -47,7 +48,7 @@ public class Peticion {
     this.numeroDocumento = numeroDocumento;
     return this;
   }
-   
+
   @ApiModelProperty(example = "67544489", required = true, value = "Numero de documento de la persona que se quiera evaluar")
   public String getNumeroDocumento() {
     return numeroDocumento;
@@ -59,7 +60,7 @@ public class Peticion {
     this.nombre = nombre;
     return this;
   }
-   
+
   @ApiModelProperty(example = "MARCOS", required = true, value = "Nombre de la persona que se quiera consultar")
   public String getNombre() {
     return nombre;
@@ -71,7 +72,7 @@ public class Peticion {
     this.segundoNombre = segundoNombre;
     return this;
   }
-   
+
   @ApiModelProperty(example = "ANTONIO", value = "Segundo nombre, si es que existe, de la persona que se quiera consultar")
   public String getSegundoNombre() {
     return segundoNombre;
@@ -83,7 +84,7 @@ public class Peticion {
     this.apellidoPaterno = apellidoPaterno;
     return this;
   }
-   
+
   @ApiModelProperty(example = "DIAZ", required = true, value = "Apellido paterno de la persona que se quiera consultar")
   public String getApellidoPaterno() {
     return apellidoPaterno;
@@ -95,7 +96,7 @@ public class Peticion {
     this.apellidoMaterno = apellidoMaterno;
     return this;
   }
-   
+
   @ApiModelProperty(example = "HERNANDEZ", value = "Apellido materno de la persona que se quiera consultar")
   public String getApellidoMaterno() {
     return apellidoMaterno;
@@ -113,12 +114,12 @@ public class Peticion {
     }
     Peticion peticion = (Peticion) o;
     return Objects.equals(this.folio, peticion.folio) &&
-        Objects.equals(this.tipoDocumento, peticion.tipoDocumento) &&
-        Objects.equals(this.numeroDocumento, peticion.numeroDocumento) &&
-        Objects.equals(this.nombre, peticion.nombre) &&
-        Objects.equals(this.segundoNombre, peticion.segundoNombre) &&
-        Objects.equals(this.apellidoPaterno, peticion.apellidoPaterno) &&
-        Objects.equals(this.apellidoMaterno, peticion.apellidoMaterno);
+            Objects.equals(this.tipoDocumento, peticion.tipoDocumento) &&
+            Objects.equals(this.numeroDocumento, peticion.numeroDocumento) &&
+            Objects.equals(this.nombre, peticion.nombre) &&
+            Objects.equals(this.segundoNombre, peticion.segundoNombre) &&
+            Objects.equals(this.apellidoPaterno, peticion.apellidoPaterno) &&
+            Objects.equals(this.apellidoMaterno, peticion.apellidoMaterno);
   }
   @Override
   public int hashCode() {
@@ -128,7 +129,7 @@ public class Peticion {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Peticion {\n");
-    
+
     sb.append("    folio: ").append(toIndentedString(folio)).append("\n");
     sb.append("    tipoDocumento: ").append(toIndentedString(tipoDocumento)).append("\n");
     sb.append("    numeroDocumento: ").append(toIndentedString(numeroDocumento)).append("\n");
@@ -139,7 +140,7 @@ public class Peticion {
     sb.append("}");
     return sb.toString();
   }
-  
+
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
