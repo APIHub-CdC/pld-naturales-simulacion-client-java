@@ -36,7 +36,7 @@ public class ApiTest {
         String xApiKey = "your_api_key";
         Peticion persona = new Peticion();
         
-        persona.setFolioOtorgante("000008");
+        persona.setFolio("000008");
         persona.setTipoDocumento("01");
         persona.setNumeroDocumento("01");
         persona.setNombre("Maria");
